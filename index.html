@@ -4,12 +4,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" 
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="./assets/icon.png">
     <link rel="stylesheet" href="./assets/style.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="head-title">
+            <h1>Pomodoro Timer</h1>
+        </div>
+        <div class="main">
+            <div class="time-setter">
+                <div id="break-label" class="setter-label">
+                    <p>Break Length</p>
+                    <div class="setter-label-flex">
+                        <button id="break-decrement" title="Decrement Break Time">
+                            <i class="fa-solid fa-arrow-down"></i>
+                        </button>
+                        <p id="break-length"></p>
+                        <button id="break-increment" title="Increment Break Time">
+                            <i class="fa-solid fa-arrow-up"></i>
+                        </button>
+                    </div>
+                </div>
+                <div id="session-label" class="setter-label">
+                    <p>Session Length</p>
+                    <div class="setter-label-flex">
+                        <button id="session-decrement" title="Decrement Session Time">
+                            <i class="fa-solid fa-arrow-down"></i>
+                        </button>
+                        <p id="session-length"></p>
+                        <button id="session-increment" title="Increment Session Time">
+                            <i class="fa-solid fa-arrow-up"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="timer-section">
+                <h2 id="timer-label"></h2>
+                <div id="time-left">
+                    <h2 id="minutes"></h2>
+                    <h2 id="seconds"></h2>
+                </div>
+                <div id="control">
+                    <button id="start-stop" title="Start/Stop the Timer">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                    <button id="restart" title="Restart the Timer">
+                        <i class="fa-solid fa-arrows-rotate"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="foot-title">
+            <p>Designed and Coded by</p>
+            <a href="https://github.com/turalshkrov" target="_blank">turalshkrov</a>
+        </div>
+    </div>
+    <audio id="beep" src="./src/BeepSound.wav"></audio>
+    <audio id="ticking" src="./src/Clock-Ticking.mp3" loop></audio>
     <script src="./app.js"></script>
 </body>
 </html>
