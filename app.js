@@ -21,7 +21,7 @@ let mode = false;
 let breakLength = 5;
 let sessionLength = 25;
 let minutes = sessionLength;
-let seconds = 45;
+let seconds = 0;
 
 const breakLabelUpdate = () => {
     breakLabel.innerText = breakLength;
@@ -72,18 +72,6 @@ const increaseSessionLength = () => {
     sessionLength < 60
         ? sessionLength += 1
         : null
-}
-
-const contdown = () => {
-    timer = setInterval(() => {
-        seconds -= 1;
-        if (seconds === -1) {
-            seconds = 59;
-            minutes -= 1;
-        }
-        console.log(minutes, seconds);
-        timerUpdate();
-    }, 1000)
 }
 
 const toggleTicking = () => {
