@@ -78,6 +78,7 @@ const toggleTicking = () => {
     ticking = !ticking;
 
     tickingSound.currentTime = 0;
+    tickingSound.volume = 0.1;
 
     ticking 
         ? tickingSound.play()
